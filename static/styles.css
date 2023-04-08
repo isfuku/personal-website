@@ -71,3 +71,64 @@ hr {
 .hide-menu #menu-toggle {
     left: 0;
 }
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    list-style-type: none;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #007bff;
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(even) {
+    margin-left: 50%;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #007bff;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #007bff;
+}
+
+.timeline-content {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
