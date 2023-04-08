@@ -4,47 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Personal Website</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            margin-left: 220px;
-        }
-        nav {
-            position: fixed;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            padding: 20px;
-            width: 200px;
-            background-color: #f8f9fa;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav ul li {
-            margin-bottom: 10px;
-        }
-        main {
-            max-width: 800px;
-            padding: 20px;
-        }
-        header {
-            padding-bottom: 20px;
-        }
-        hr {
-            margin-bottom: 40px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button id="menu-toggle" onclick="toggleMenu()">≡</button>
     <nav>
         <ul>
-            <li><a href="#header" class="text-decoration-none">Home</a></li>
-            <li><a href="#professional-trajectory" class="text-decoration-none">Professional Trajectory</a></li>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#professional-trajectory">Professional Trajectory</a></li>
             <!-- Add more list items for each section you want to link to -->
         </ul>
     </nav>
@@ -71,5 +38,10 @@
             </ul>
         </section>
     </main>
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('hide-menu');
+        }
+    </script>
 </body>
 </html>
