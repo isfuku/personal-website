@@ -35,7 +35,7 @@ nav a:hover {
 }
 
 main {
-    max-width: 800px;
+    max-width: 1200px;
     padding: 20px;
 }
 
@@ -50,6 +50,11 @@ img.rounded-circle {
 
 hr {
     margin-bottom: 40px;
+}
+
+img {
+    max-width: 60%;
+    border-radius: 10%;
 }
 
 #menu-toggle {
@@ -74,61 +79,55 @@ hr {
 
 /* Timeline */
 .timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    list-style-type: none;
-}
-
-.timeline:before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background-color: #007bff;
+    display: flex;
+    flex-direction: column;
 }
 
 .timeline-item {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    /* align-items: center; */
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.timeline-date {
     position: relative;
-    width: 50%;
-    padding: 20px;
-    box-sizing: border-box;
+    width: 11ch;
+    background-color: #ffa3a3;
 }
 
-.timeline-item:nth-child(even) {
-    margin-left: 50%;
+.timeline-logo {
+    position: relative;
+    width: calc(100% - 11ch);
+    flex: 1 1 10%;
+    background-color: #d9fdc8;
+    --item-width: calc(100%);
 }
-
-.timeline-item:before {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
+.timeline-logo::before {
+    content: "";
     border-radius: 50%;
-    background-color: #007bff;
-}
-
-.timeline-icon {
+    width: 8px;
+    height: 8px;
+    background-color: #a7a7a7;
     position: absolute;
-    left: 50%;
-    top: 20px;
-    transform: translateX(-50%);
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: #007bff;
+    left: -5px;
+    top: 0px;
 }
 
-.timeline-content {
-    padding-left: 40px;
-    padding-right: 40px;
+.timeline-logo::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 0px;
+    right: calc(var(--item-width));
+    width: 2px;
+    background-color: #a7a7a7;
 }
 
-.timeline-item:nth-child(even) .timeline-content {
-    padding-left: 40px;
-    padding-right: 40px;
+.timeline-description {
+    width: calc(100% - 11ch);
+    flex: 9 1 90%;
+    background-color: #a0a6f0;
 }
-
