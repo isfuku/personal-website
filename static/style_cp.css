@@ -7,7 +7,7 @@ body {
     color: #333;
 }
 main {
-    max-width: 990px;
+    max-width: 900px;
     padding: 20px;
 }
 
@@ -22,72 +22,6 @@ img {
 
 .rounded-circle {
     border-radius: 50%;
-}
-
-/* Layout */
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.about {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-}
-
-#head {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-#faceshot {
-    grid-column: span 3;
-    text-align: left;
-}
-#name-title {
-    padding-top: 40px;
-    padding-left: 20px;
-    text-align: left;
-    grid-column: span 6;
-}
-/* #media {
-    grid-column: span 6;
-} */
-@media (max-width: 680px) {
-    #faceshot {
-      grid-column: span 6;
-      text-align: center;
-    }
-    #name-title {
-      grid-column: span 6;
-      padding-top: 2px;
-      text-align: center;
-    }
-}
-.rounded-circle {
-    width: 180px;
-    height: 180px;
-    border-radius: 120px;
-}
-.iico {
-    width: 40px;
-    height: 40px;
-}
-
-h1 {
-    font-size: 34px;
-    font-weight: normal;
-    padding: 0;
-    margin: 0;
-}
-h3 {
-    font-weight: normal;
-    font-style: italic;
-    color: #999;
-    font-size: 18px;
-    padding: 0;
-    margin: 5px 0 10px 0;
 }
 
 /* Timeline */

@@ -3,61 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Website</title>
+    <title>Ian Fukushima</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <button id="menu-toggle" onclick="toggleMenu()">≡</button>
-    <nav>
-        <ul>
-            <li><a href="#header">Home</a></li>
-            <li><a href="#professional-trajectory">Professional Trajectory</a></li>
-            <!-- Add more list items for each section you want to link to -->
-        </ul>
-    </nav>
     <main>
-        <header id="header" class="text-center">
-            <img src="your-photo.jpg" alt="Your Name" width="150" height="150" class="rounded-circle">
-            <h1>Your Name</h1>
-        </header>
-        <hr>
+        <div id="head" class="container">
+            <div class="about">
+                <div id="faceshot">
+                    <img src="data:image/jpeg;base64,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"
+                    alt="faceshot" width="150" height="150" class="rounded-circle">
+                </div>
+                <div id="name-title">
+                    <h1>Ian Fukushima</h1>
+                    <h3>Very serious compared to my dogs</h3>
+                    <div id="media">
+                        <a href="https://twitter.com/karpathy"><img src="https://karpathy.ai//assets/ctwitter.svg" class="iico" /></a>
+                        <a href="https://github.com/karpathy"><img src="https://karpathy.ai//assets/cgithub.svg" class="iico"/></a>
+                        <a href="https://karpathy.github.io"><img src="https://karpathy.ai//assets/crss.svg" class="iico" /></a>
+                        <a href="https://medium.com/@karpathy"><img src="https://karpathy.ai//assets/crss.svg" class="iico" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <hr> -->
         <!-- Professional Timeline -->
-        <section id="professional-trajectory">
-            <h2>Professional Trajectory</h2>
+        <div class="container">
+            <h2 class="h2-title">Professional Trajectory</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-date">
-                    2015 - 2017
+                    2015-2017
                     </div>
                     <div class="timeline-logo">
-                        <div class="entry-dot"></div>
-                        <img src="https://karpathy.ai/assets/tesla_logo2.jpg" />
+                        <img src="https://media.glassdoor.com/sqll/4293032/blue-orange-digital-squarelogo-1627548019155.png" />
                     </div>
                     <div class="timeline-description">
-                    Job Description foo bar Job Description foo bar Job Description foo bar Job Description foo bar
-                    Job Description foo bar Job Description foo bar Job Description foo bar Job Description foo bar
-                    Job Description foo bar Job Description foo bar Job Description foo bar Job Description foo bar
-                    Job Description foo bar Job Description foo bar Job Description foo bar Job Description foo bar
-                    Job Description foo bar Job Description foo bar Job Description foo bar Job Description foo bar
-                    Job Description foo bar Job Description foo bar Job Description foo bar Job Description foo bar
+                        During my two years as a Senior Data Scientist, I successfully led multiple 
+                        cross-functional teams in developing and implementing data-driven solutions 
+                        that improved business performance and efficiency. I utilized my expertise 
+                        in statistical analysis, machine learning, and data visualization to extract 
+                        actionable insights from complex datasets, which drove key business decisions. 
+                        Additionally, I collaborated closely with stakeholders to define project goals, 
+                        scope, and timelines, and communicated project progress and results to 
+                        executive leadership. Through my leadership and technical skills, I 
+                        significantly contributed to the growth and success of the organization.
                     </div>
                 </div>
 
-            <!-- Add more timeline items for each position you want to showcase -->
-            <div class="timeline-item">
-                <div class="timeline-date">
-                2015 - 2017
+                <!-- Tabas Experience -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2015-2017</div>
+                    <div class="timeline-logo">
+                        <img src="https://tabas.com/packs/media/images/share-1200x630-ac4fbba5e0e5b7044e8f3d5d4135fb77.png" />
+                    </div>
+                    <div class="timeline-description">
+                        Data Science and Engineering responsibilities. Trained and deployed Machine 
+                        Learning models used internally to predict reference prices. Build data 
+                        infrastructure, from data collection, ML framework and Data Warehouse 
+                        architecture and implementation
+                    </div>
                 </div>
-                <div class="timeline-logo">
-                    <div class="entry-dot"></div>
-                    <img src="https://karpathy.ai/assets/tesla_logo2.jpg" />
+
+                <!-- Indicium -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2015-2017</div>
+                    <div class="timeline-logo">
+                        <img src="https://gust-production.s3.amazonaws.com/uploads/startup/logo_image/1150187/INDICIUM-02.jpg" />
+                    </div>
+                    <div class="timeline-description">
+                        As a Data Scientist consultant, I worked with a diverse set of clients, 
+                        using Machine Learning to create data powered products, detect fraud and 
+                        predict prices and demand.
+                    </div>
                 </div>
-                <div class="timeline-description">
-                Job Description foo bar
+
+                <!-- USP -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2015-2017</div>
+                    <div class="timeline-logo">
+                        <img src="https://imagens.usp.br/wp-content/uploads/USP-Bras%C3%A3o.jpg" />
+                    </div>
+                    <div class="timeline-description">
+                        Social Distancing and Crime: Evaluation of the Impact of Mobility Restriction 
+                        in Crime
+                    </div>
                 </div>
             </div>
-            </div>
-        </section>
+        </div>
+
+        <!-- Projects and Articles -->
+        <div class="container">
+            <h2 class="h2-title">Projects and Articles</h2>
+        </div>
     </main>
     <script>
         function toggleMenu() {
