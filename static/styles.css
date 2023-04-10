@@ -7,7 +7,7 @@ body {
     color: #333;
 }
 main {
-    max-width: 990px;
+    max-width: 900px;
     padding: 20px;
 }
 
@@ -30,8 +30,25 @@ img {
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 15px;
 }
 
+h1 {
+    font-size: 34px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+h3 {
+    font-weight: normal;
+    font-style: italic;
+    color: #999;
+    font-size: 18px;
+    padding: 0;
+    margin: 5px 0 10px 0;
+}
+
+/* Header */
 .about {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -51,16 +68,13 @@ img {
     text-align: left;
     grid-column: span 6;
 }
-/* #media {
-    grid-column: span 6;
-} */
-@media (max-width: 680px) {
+@media (max-width: 791px) {
     #faceshot {
-      grid-column: span 6;
+      grid-column: span 12;
       text-align: center;
     }
     #name-title {
-      grid-column: span 6;
+      grid-column: span 12;
       padding-top: 2px;
       text-align: center;
     }
@@ -71,23 +85,8 @@ img {
     border-radius: 120px;
 }
 .iico {
-    width: 40px;
-    height: 40px;
-}
-
-h1 {
-    font-size: 34px;
-    font-weight: normal;
-    padding: 0;
-    margin: 0;
-}
-h3 {
-    font-weight: normal;
-    font-style: italic;
-    color: #999;
-    font-size: 18px;
-    padding: 0;
-    margin: 5px 0 10px 0;
+    width: 30px;
+    height: 30px;
 }
 
 /* Timeline */
@@ -147,4 +146,60 @@ h3 {
     flex: 92 1 92%;
     padding-bottom: 16px;
     background-color: #ffffff;
+}
+
+/* Research */
+.research-entry {
+    border-left: 4px solid #cfcfcf;
+    padding: 0px 0px 0px 16px;
+    margin-bottom: 10px;
+}
+.research-title {
+    display: inline;
+    color: #333;
+}
+.research-venue {
+    display: inline;
+    color: #414141;
+}
+.research-authors {
+    display: block;
+}
+
+.research-imgs {
+    position: inline;
+}
+@media (max-width: 951px) {
+    .research-imgs {
+        display: none;
+    }
+}
+.research-img {
+    /* position: absolute; */
+    margin: 0;
+    padding: 0;
+}
+
+/* Misc */
+.misc {
+    margin-bottom: 10px;
+}
+
+.misc-entry {
+    position: relative;
+    display: inline;
+}
+.misc-entry-dot {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #cfcfcf;
+    position: absolute;
+    left: 0px;
+    top: 4px;
+    transform: rotate(45deg);
+}
+.misc-entry-text {
+    padding-left: 16px;
+    margin-bottom: 10px;
 }
