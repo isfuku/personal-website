@@ -180,16 +180,16 @@ h3 {
     padding: 0;
 }
 
-/* Misc */
-.misc {
+/* Media */
+.media {
     margin-bottom: 10px;
 }
 
-.misc-entry {
+.media-entry {
     position: relative;
     display: inline;
 }
-.misc-entry-dot {
+.media-entry-dot {
     content: "";
     width: 10px;
     height: 10px;
@@ -199,7 +199,7 @@ h3 {
     top: 4px;
     transform: rotate(45deg);
 }
-.misc-entry-text {
+.media-entry-text {
     padding-left: 16px;
     margin-bottom: 10px;
 }
